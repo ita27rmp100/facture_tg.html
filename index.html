@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>حساب فاتورة ك/غ</title>
+        <link rel="stylesheet"href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>ك/غ</th>
+                <th>التسعيرة</th>
+                <th>البيان الجديد</th>
+                <th>البيان القديم</th>
+                <th>الفرق</th>
+                <th>المعامل</th>
+                <th>الإستهلاك</th>
+            </tr>
+            <tr>
+                <th>ك</th>
+                <td>54M</td>
+                <td style="padding:0px"><input type="number"id="new"></td>
+                <td style="padding:0px"><input type="number"id="old"></td>
+                <td id="dif"></td>
+                <td id="lab">1</td>
+                <td id="con"></td>
+            </tr>
+            <tr>
+                <th>غ</th>
+                <td>23M</td>
+                <td style="padding:0px"><input type="number"id="newg"></td>
+                <td style="padding:0px"><input type="number"id="oldg"></td>
+                <td id="difg"></td>
+                <td id="labg">8.8</td>
+                <td id="cong"></td>
+            </tr>
+            <tr>
+                <td colspan="8"style="padding:5px;border-color:rgb(243, 222, 165)" rowspan="0">
+                    <button onclick="calc()">أحسب</button>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th colspan="5">الفاتورة</th>
+            </tr>
+            <tr>
+                <th>العنصر</th>
+                <th colspan="2">الكهرباء</th>
+                <th colspan="2">الغاز</th>
+            </tr>
+            <tr>
+                <th>التسعيرة</th>
+                <td colspan="2">54M</td>
+                <td colspan="2">23M</td>
+            </tr>
+            <tr>
+                <th>الإستهلاك</th>
+                <td colspan="2"id="ct"></td>
+                <td colspan="2"id="cg"></td>
+            </tr>
+            <tr>
+                <th>ثمن الإستهلاك</th>
+                <td colspan="2"id="pt"></td>
+                <td colspan="2"id="pg"></td>
+            </tr>
+            <tr>
+                <th colspan="3">مجموع م.ر</th>
+                <td>250</td>
+            </tr>
+            <tr>
+                <th colspan="3">المبلغ المستحق</th>
+                <td id="pay"></td>
+            </tr>
+            <tr>
+                <th colspan="3">ضريبة الطابع</th>
+                <td id="st"></td>
+            </tr>
+            <tr>
+                <th colspan="3">المبلغ الإجمالي DA</th>
+                <td id="tp"></td>
+            </tr>
+        </table>
+    </body>
+</html>
